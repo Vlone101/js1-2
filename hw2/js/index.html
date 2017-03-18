@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var logins = [];
+    i = 0;
+
+    while (logins.length < 5) {
+        logins[i] = prompt('Введите имя');
+        while (true) {
+            if (logins[i] == null || logins[i] == "") {
+                alert("Вы не ввели имя");
+                logins[i] = prompt('Введите имя');
+            }
+            else
+                break;
+        }
+        i++;
+    }
+
+    if (logins.length < 5) alert("ERROR");
+
+    var name = prompt('Войти в аккаунт: Введите имя');
+
+    for (i = 0; i < logins.length; i++) {
+
+        if (name == logins[i]) {
+            var message = (logins[i] + ', вы успешно вошли!');
+
+            break;
+
+        } else {
+            message = ('Пользователь не найден.')
+        }
+    }
+    alert(message);
+
+</script>
+</body>
+</html>
